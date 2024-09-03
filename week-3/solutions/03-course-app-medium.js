@@ -2,8 +2,11 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const app = express();
+const cors = require('cors');
+
 
 app.use(express.json());
+app.use(cors());
 
 let ADMINS = [];
 let USERS = [];
